@@ -11,9 +11,9 @@ import torch.nn as nn
 
 from sklearn.metrics import accuracy_score
 
-from rationale_benchmark.utils import Annotation
+from src.eraserbenchmark.utils import Annotation
 
-from rationale_benchmark.models.pipeline.pipeline_utils import (
+from .pipeline_utils import (
     SentenceEvidence,
     annotations_to_evidence_identification,
     make_preds_epoch,

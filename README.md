@@ -1,13 +1,16 @@
+# Befor you start:
+This is a forked repo of the original [eraserbenchmark](https://github.com/jayded/eraserbenchmark). I did some modifications to make it more fitful for our projects. Please consider to cite the [original paper](https://arxiv.org/abs/1911.03429) if this repo interests you! :)
+
 # eraserbenchmark
 A benchmark for understanding and evaluating rationales: http://www.eraserbenchmark.com/
 
 ## Core Files
 
-The core files are [utils](rationale_benchmark/utils.py) and [metrics](rationale_benchmark/metrics.py).
+The core files are [utils](src/eraserbenchmark/utils.py) and [metrics](src/eraserbenchmark/metrics.py).
 These two files comprise everything you need to work with our released datasets.
 
-[utils](rationale_benchmark/utils.py) documents everything you need to know about our input formats. Output
-formats and validation code are covered in [metrics](rationale_benchmark/metrics.py).
+[utils](src/eraserbenchmark/utils.py) documents everything you need to know about our input formats. Output
+formats and validation code are covered in [metrics](src/eraserbenchmark/metrics.py).
 
 ## Models
 

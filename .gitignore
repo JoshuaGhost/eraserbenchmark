@@ -1,3 +1,4 @@
+.idea
 model_components
 pipeline_outputs
 *.swp
@@ -106,6 +107,6 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-rationale_benchmark/data/esnli_previous
+src/eraserbenchmark/data/esnli_previous
 data/esnli_previous
 esnli_union/

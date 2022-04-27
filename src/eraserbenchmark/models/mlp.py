@@ -5,7 +5,7 @@ import torch.nn as nn
 
 from transformers import BertForSequenceClassification
 
-from rationale_benchmark.models.model_utils import PaddedSequence
+from .model_utils import PaddedSequence
 
 
 class WordEmbedder(nn.Module):
@@ -249,7 +249,6 @@ class BertClassifier(nn.Module):
         super(BertClassifier, self).__init__()
         bert = BertForSequenceClassification.from_pretrained(bert_dir, num_labels=num_labels)
         if use_half_precision:
-            import apex
             bert = bert.half()
         self.bert = bert
         self.pad_token_id = pad_token_id

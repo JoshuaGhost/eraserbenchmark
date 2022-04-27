@@ -13,21 +13,21 @@ import torch
 
 from transformers import BertTokenizer
 
-from rationale_benchmark.models.sequence_taggers import BertTagger
-from rationale_benchmark.utils import (
+from ..sequence_taggers import BertTagger
+from ...utils import (
     Annotation,
     Evidence,
     write_jsonl,
     load_datasets,
     load_documents,
 )
-from rationale_benchmark.models.mlp import (
+from ..mlp import (
     BertClassifier,
 )
-from rationale_benchmark.models.pipeline.evidence_identifier import train_evidence_identifier
-from rationale_benchmark.models.pipeline.evidence_token_identifier import train_evidence_token_identifier
-from rationale_benchmark.models.pipeline.evidence_classifier import train_evidence_classifier
-from rationale_benchmark.models.pipeline.pipeline_utils import decode, decode_evidence_tokens_and_classify
+from .evidence_identifier import train_evidence_identifier
+from .evidence_token_identifier import train_evidence_token_identifier
+from .evidence_classifier import train_evidence_classifier
+from .pipeline_utils import decode, decode_evidence_tokens_and_classify
 
 logging.basicConfig(level=logging.DEBUG, format='%(relativeCreated)6d %(threadName)s %(message)s')
 logger = logging.getLogger(__name__)

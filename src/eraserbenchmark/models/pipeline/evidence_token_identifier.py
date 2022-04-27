@@ -1,4 +1,3 @@
-import itertools
 import logging
 import os
 import random
@@ -12,10 +11,13 @@ import torch
 
 from torch import nn
 
-from rationale_benchmark.models.pipeline.pipeline_utils import SentenceEvidence, score_rationales, \
-    annotations_to_evidence_token_identification, make_token_preds_epoch
-from rationale_benchmark.utils import Annotation
-from rationale_benchmark.models.model_utils import PaddedSequence
+from .pipeline_utils import (
+    SentenceEvidence,
+    annotations_to_evidence_token_identification,
+    make_token_preds_epoch
+)
+from ...utils import Annotation
+from ..model_utils import PaddedSequence
 
 
 def _get_sampling_method(training_pars: dict) -> Callable[

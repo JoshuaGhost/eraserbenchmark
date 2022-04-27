@@ -5,7 +5,7 @@ from typing import List, Tuple, Any
 
 from transformers import BertModel
 
-from rationale_benchmark.models.model_utils import PaddedSequence
+from .model_utils import PaddedSequence
 
 
 class BertTagger(nn.Module):
@@ -23,7 +23,6 @@ class BertTagger(nn.Module):
         self.max_length = max_length
         bert = BertModel.from_pretrained(bert_dir)
         if use_half_precision:
-            import apex
             bert = bert.half()
         self.bert = bert
         self.relevance_tagger = nn.Sequential(

@@ -10,9 +10,9 @@ import torch.nn as nn
 
 from sklearn.metrics import accuracy_score, classification_report
 
-from rationale_benchmark.utils import Annotation
+from ...utils import Annotation
 
-from rationale_benchmark.models.pipeline.pipeline_utils import (
+from .pipeline_utils import (
     annotations_to_evidence_classification,
     token_annotations_to_evidence_classification,
     make_preds_epoch,

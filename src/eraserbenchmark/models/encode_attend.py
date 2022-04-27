@@ -7,7 +7,7 @@ import os
 from collections import defaultdict, OrderedDict
 from heapq import nsmallest, nlargest
 from itertools import chain
-from typing import Any, Dict, List, Set, Tuple
+from typing import Dict, List, Set, Tuple
 
 #import apex
 import numpy as np
@@ -16,18 +16,18 @@ import torch.nn as nn
 
 from sklearn.metrics import accuracy_score, classification_report
 
-from rationale_benchmark.utils import (
+from ..utils import (
     Annotation,
     load_datasets,
     load_documents,
     intern_documents,
     intern_annotations
 )
-from rationale_benchmark.models.model_utils import (
+from .model_utils import (
     PaddedSequence,
     extract_embeddings,
 )
-from rationale_benchmark.models.mlp import (
+from .mlp import (
     AttentiveClassifier,
     LuongAttention,
     RNNEncoder,
